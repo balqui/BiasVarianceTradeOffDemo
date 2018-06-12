@@ -17,53 +17,39 @@
 
 <body onload="brython()">
 
-<!--Check for companion file DemoWSJ.py nearby-->
+<!--Check for companion file BVT.py nearby-->
 
-<!--Tried to enable inputs and buttons one by one but did not manage-->
-	
 <button id="aboutbutton">About...</button>
 
 <br>
 
-<label>Please start by indicating how many clusters and how many values seen so far:</label>
+<label>Parameters:</label>
 
 <br>
 
-<input id="numclusters" autocomplete="off" placeholder="How many clusters?">
+<label>Mean:</label><input id="mean" autocomplete="off" value="3.3">
 
 <br>
 
-<input id="numvalues" autocomplete="off" placeholder="How many values so far?">
+<label>Standard Deviation:</label><input id="stdev" autocomplete="off" value="2">
 
 <br>
 
-<button id="startbutton">Click to provide ordered values</button>
+<label>Sample size:</label><input id="ssize" autocomplete="off" value="25">
 
 <br>
 
-<input id="value" autocomplete="off" disabled>
+<button id="samplebutton">Click to sample and get approximations to the mean</button>
 
 <br>
 
-<button id="submitbutton" disabled>Submit one value...</button>
+<label>Values sampled:</label><div id="samplevalues" class="zone"></div>
 
 <br>
 
-<label id="allvallab">Values, clustered when possible:</label><div id="allvalues" class="zone"></div>
+<label>Approximations to the mean with varying precision:</label><div id="approxmean" class="zone"></div>
 
-<br>
-
-<input id="newvalue" autocomplete="off" placeholder="New value" disabled><button id="submitnewbutton" disabled>Submit</button>
-
-<br>
-
-<label id="allcluslab">Clusterings considered:</label><div id="allclus" class="zone"></div>
-
-<br>
-
-<label id="bestcluslab">Best clustering:</label><div id="bestclus" class="zone"></div>
-
-<script type="text/python" src="DemoWSJ.py"></script>
+<script type="text/python" src="BVT.py"></script>
 
 </body>
 
